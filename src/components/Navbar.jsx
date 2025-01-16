@@ -19,8 +19,9 @@ function Navbar() {
       <div className="flex justify-between items-center w-full">
         {/* Logo on the far left */}
         <div className="text-2xl font-bold"><img src="/jopelogo.jpg" alt="jopegraphics logo" style={{
-    width: "50px",
+    width: "70px",
     height: "50px",
+    borderRadius: "10%",
    
    
   }} /></div>
