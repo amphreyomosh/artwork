@@ -2,7 +2,7 @@ function Home() {
     return (
       <div className="min-h-screen bg-gray-100">
         {/* Hero Section */}
-        <section className="relative w-full h-[60vh] bg-cover bg-center" style={{ backgroundImage: "url('/path-to-your-image.jpg')" }}>
+        <section className="relative w-full h-[60vh] bg-cover bg-center" style={{ backgroundImage: "url('https://plus.unsplash.com/premium_photo-1678812165206-688656de3b73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0fGVufDB8fDB8fHww')" }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
             <h1 className="text-5xl font-bold">Welcome to the Art Website</h1>
