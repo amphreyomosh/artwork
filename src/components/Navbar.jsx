@@ -18,7 +18,12 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white p-5 z-50">
       <div className="flex justify-between items-center w-full">
         {/* Logo on the far left */}
-        <div className="text-2xl font-bold">JopeGraphic</div>
+        <div className="text-2xl font-bold"><img src="/jopelogo.jpg" alt="jopegraphics logo" style={{
+    width: "50px",
+    height: "50px",
+   
+   
+  }} /></div>
 
         {/* Navigation links on the far right for large screens */}
         <div className="hidden md:flex space-x-4 ml-auto">
