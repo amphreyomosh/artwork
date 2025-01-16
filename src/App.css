@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Keyframe animation for the wave effect */
+@keyframes waveDraw {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Apply the wave effect to the curtain */
+.curtain-wave {
+  animation: waveDraw 0.6s ease-in-out forwards;
+}
+
+.curtain-open {
+  animation: waveDraw 0.6s ease-in-out forwards;
+}
+
+/* Navbar background expansion */
+nav .absolute {
+  height: 0;
+  transition: height 1s ease-in-out;
+}
+
+nav .absolute.curtain-open {
+  height: 100vh;
+}
