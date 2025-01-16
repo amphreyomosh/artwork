@@ -22,8 +22,8 @@ function Navbar() {
     width: "70px",
     height: "50px",
     borderRadius: "10%",
-   
-   
+    imageRendering: "auto", 
+    filter: "brightness(1)",
   }} /></div>
 
         {/* Navigation links on the far right for large screens */}
