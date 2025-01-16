@@ -15,7 +15,7 @@ function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav className="relative bg-gray-800 text-white p-5">
+    <nav className="fixed bg-gray-800 text-white p-5">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Logo on the far left */}
         <div className="text-2xl font-bold">ArtSite</div>
