@@ -8,7 +8,7 @@ function Home() {
         {/* SEO Tags */}
         <title>Welcome to the Art Website - Discover Beautiful Artworks</title>
         <meta name="description" content="Explore a collection of beautiful artwork created by talented artists. Learn about the creators and their stories on this art website." />
-        <meta name="keywords" content="art, artwork, paintings, talented artists, artwork collection, art gallery" />
+        <meta name="keywords" content="art, artwork, paintings, talented artists, artwork collection, art gallery, jopegraphic" />
         <meta property="og:title" content="Welcome to the Art Website - Discover Beautiful Artworks" />
         <meta property="og:description" content="Explore a collection of beautiful artwork created by talented artists. Learn about the creators and their stories on this art website." />
         <meta property="og:image" content="https://plus.unsplash.com/premium_photo-1678812165206-688656de3b73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0fGVufDB8fDB8fHww" />
