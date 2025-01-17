@@ -1,11 +1,45 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+import Slider from 'react-slick';
 
 function Home() {
+  const carouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 7000, // 7 seconds for each slide
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const images = [
+    'https://images.unsplash.com/photo-1653987255814-3b4c05832660?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJ0d29ya3N8ZW58MHx8MHx8fDA%3D',
+    'https://images.unsplash.com/photo-1653987255814-3b4c05832660?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJ0d29ya3N8ZW58MHx8MHx8fDA%3D',
+    'https://images.unsplash.com/photo-1653987255814-3b4c05832660?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJ0d29ya3N8ZW58MHx8MHx8fDA%3D',
+    'https://images.unsplash.com/photo-1653987255814-3b4c05832660?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJ0d29ya3N8ZW58MHx8MHx8fDA%3D',
+  ];
+
   return (
-    <div className='min-h-screen bg-gray-100'>
+    <div className='min-h-screen bg-gray-100 overflow-x-hidden'>
       <Helmet>
-        {/* SEO Tags */}
         <title>Welcome to the Art Website - Discover Beautiful Artworks</title>
         <meta
           name='description'
@@ -15,7 +49,6 @@ function Home() {
           name='keywords'
           content='art, artwork, paintings, talented artists, artwork collection, art gallery, jopegraphic'
         />
-        {/* Social Tags */}
         <meta
           property='og:image'
           content='https://plus.unsplash.com/premium_photo-1678812165206-688656de3b73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0fGVufDB8fDB8fHww'
@@ -47,54 +80,24 @@ function Home() {
         </p>
       </section>
 
-      {/* Featured Artists */}
-      <section className='py-16 px-4 bg-gray-50'>
-        <h2 className='text-3xl font-semibold text-center mb-6'>Featured Artists</h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <div className='text-center'>
-            <img
-              src='/path-to-artist-1.jpg'
-              alt='Artist 1'
-              className='w-32 h-32 rounded-full mx-auto mb-4'
-            />
-            <h3 className='text-xl font-bold'>Artist Name 1</h3>
-            <p className='text-gray-600'>Abstract & Modern Art</p>
-          </div>
-          <div className='text-center'>
-            <img
-              src='/path-to-artist-2.jpg'
-              alt='Artist 2'
-              className='w-32 h-32 rounded-full mx-auto mb-4'
-            />
-            <h3 className='text-xl font-bold'>Artist Name 2</h3>
-            <p className='text-gray-600'>Sculptures & Installations</p>
-          </div>
-          <div className='text-center'>
-            <img
-              src='/path-to-artist-3.jpg'
-              alt='Artist 3'
-              className='w-32 h-32 rounded-full mx-auto mb-4'
-            />
-            <h3 className='text-xl font-bold'>Artist Name 3</h3>
-            <p className='text-gray-600'>Realistic Oil Paintings</p>
-          </div>
-        </div>
+      {/* Carousel Section */}
+      <section className='py-16 px-4 bg-white'>
+        <h2 className='text-3xl font-semibold text-center mb-6'>Artwork Carousel</h2>
+        <Slider {...carouselSettings}>
+          {images.map((image, index) => (
+            <div key={index} className='p-4'>
+              <img
+                src={image}
+                alt={`Artwork ${index + 1}`}
+                className='rounded-lg shadow-md w-full h-48 object-cover'
+              />
+            </div>
+          ))}
+        </Slider>
       </section>
 
-      {/* Testimonials */}
-      <section className='py-16 px-4'>
-        <h2 className='text-3xl font-semibold text-center mb-6'>Testimonials</h2>
-        <div className='max-w-3xl mx-auto space-y-8'>
-          <blockquote className='text-lg text-gray-700'>
-            "This website is a treasure trove of inspiration! The artworks are stunning, and the
-            platform is user-friendly." – Jane Doe
-          </blockquote>
-          <blockquote className='text-lg text-gray-700'>
-            "As an artist, I love how this platform showcases diverse styles and connects art lovers
-            with creators." – John Smith
-          </blockquote>
-        </div>
-      </section>
+      {/* Other Sections */}
+      {/* ... */}
     </div>
   );
 }
