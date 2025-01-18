@@ -1,0 +1,30 @@
+.popup-message {
+  position: fixed;
+  /* Adjust to place below navbar */
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: gray; /* Yellow background */
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 40px;
+  transform: translateY(-10px); /* Start with message above the screen */
+  animation: bounceIn 2s ease-out forwards; /* Bounce animation with a smooth 2s transition */
+  transition: transform 1.5s ease-out; /* Smooth transition */
+}
+
+/* Bounce Animation */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(20px); /* Start slightly above */
+  }
+  50% {
+    transform: translateY(17px); /* Move below */
+  }
+
+  100% {
+    transform: translateY(20px); /* Settle at the final position */
+  }
+}

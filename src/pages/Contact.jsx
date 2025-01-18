@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
+    company: '',
     email: '',
+    phoneNumber: '',
+    country: 'US',
     message: '',
   });
 
@@ -18,51 +22,84 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Message Sent!');
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({
+      firstName: '',
+      lastName: '',
+      company: '',
+      email: '',
+      phoneNumber: '',
+      country: 'US',
+      message: '',
+    });
   };
 
   return (
-    <div
-      id="contact"
-      className="min-h-screen bg-gray-200 p-6"
-      style={{ marginTop: '80px', paddingTop: '100px' }}
-    >
-      <div className="max-w-3xl mx-auto">
-        {/* Header Section */}
-        <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
-          Contact Us
-        </h1>
-        <p className="text-lg text-center mb-8 text-gray-600">
-          Feel free to reach out to us with any questions or comments. We'd love
-          to hear from you!
+    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div className="mx-auto max-w-2xl text-center">
+        <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          Contact Sales
+        </h2>
+        <p className="mt-2 text-lg text-gray-600">
+          Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
-
-        {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-md">
-          {/* Name Field */}
-          <div className="mb-6">
+      </div>
+      <form
+        onSubmit={handleSubmit}
+        className="mx-auto mt-16 max-w-xl sm:mt-20"
+      >
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div>
             <label
-              htmlFor="name"
-              className="block text-sm font-semibold text-gray-700"
+              htmlFor="firstName"
+              className="block text-sm font-semibold text-gray-900"
             >
-              Name
+              First name
             </label>
             <input
               type="text"
-              id="name"
-              name="name"
-              value={formData.name}
+              id="firstName"
+              name="firstName"
+              value={formData.firstName}
               onChange={handleChange}
-              required
-              className="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 focus:outline-indigo-600"
             />
           </div>
-
-          {/* Email Field */}
-          <div className="mb-6">
+          <div>
+            <label
+              htmlFor="lastName"
+              className="block text-sm font-semibold text-gray-900"
+            >
+              Last name
+            </label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 focus:outline-indigo-600"
+            />
+          </div>
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="company"
+              className="block text-sm font-semibold text-gray-900"
+            >
+              Company
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 focus:outline-indigo-600"
+            />
+          </div>
+          <div className="sm:col-span-2">
             <label
               htmlFor="email"
-              className="block text-sm font-semibold text-gray-700"
+              className="block text-sm font-semibold text-gray-900"
             >
               Email
             </label>
@@ -72,39 +109,65 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
-              className="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 focus:outline-indigo-600"
             />
           </div>
-
-          {/* Message Field */}
-          <div className="mb-6">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="phoneNumber"
+              className="block text-sm font-semibold text-gray-900"
+            >
+              Phone number
+            </label>
+            <div className="mt-2.5 flex">
+              <select
+                id="country"
+                name="country"
+                value={formData.country}
+                onChange={handleChange}
+                className="rounded-l-md px-3.5 py-2 bg-white outline outline-1 outline-gray-300 focus:outline-indigo-600"
+              >
+                <option value="US">US</option>
+                <option value="CA">CA</option>
+                <option value="EU">EU</option>
+              </select>
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                placeholder="123-456-7890"
+                className="flex-grow rounded-r-md px-3.5 py-2 bg-white outline outline-1 outline-gray-300 focus:outline-indigo-600"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-2">
             <label
               htmlFor="message"
-              className="block text-sm font-semibold text-gray-700"
+              className="block text-sm font-semibold text-gray-900"
             >
               Message
             </label>
             <textarea
               id="message"
               name="message"
+              rows="4"
               value={formData.message}
               onChange={handleChange}
-              required
-              rows="5"
-              className="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 focus:outline-indigo-600"
             ></textarea>
           </div>
-
-          {/* Submit Button */}
+        </div>
+        <div className="mt-10">
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 focus:outline-indigo-600"
           >
-            Send Message
+            Let's talk
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 };
