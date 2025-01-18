@@ -10,7 +10,6 @@ function Home() {
 
   // Carousel settings
   const carouselSettings = {
-    dots: true,
     infinite: true,
     speed: 700,
     slidesToShow: 3,
