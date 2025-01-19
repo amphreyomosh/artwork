@@ -40,7 +40,7 @@ const Contact = () => {
           Contact Me!
         </h2>
         <p className="mt-2 text-lg text-gray-600">
-          I will create one your favourite art work.
+          I will create your favourite art work.
         </p>
       </div>
       <form
