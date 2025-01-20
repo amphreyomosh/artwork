@@ -46,7 +46,7 @@ function Navbar() {
   const handleSearch = () => {
     if (searchQuery.trim()) {
       const searchResults = artworks.filter((artwork) =>
-        artwork.title.toLowerCase().includes(searchQuery.toLowerCase())
+        artwork.title.toLowerCase().includes(searchQuery.toLowerCase()),
       );
       setFilteredArtworks(searchResults);
 
@@ -110,19 +110,19 @@ function Navbar() {
 
         {/* Search Bar on Large Screens */}
         <div className='hidden md:flex ml-4 items-center'>
-          <div className='flex items-center bg-white rounded-full px-3 py-1 shadow-md'>
+          <div className='flex items-center bg-white  px-3 py-1 shadow-lg'>
             <i className='text-black text-lg'>&#128269;</i>
             <input
               type='text'
               placeholder='Search for art...'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className='ml-2 px-4 py-2 rounded-full bg-transparent text-gray-700 focus:outline-none w-0 transition-all ease-in-out duration-300 focus:w-56'
+              className='ml-2 px-4 py-2 rounded-lg border  bg-transparent border-yellow-700 text-gray-700 focus:outline-none w-0 transition-all ease-in-out duration-300 focus:w-56'
             />
           </div>
           <button
             onClick={handleSearch}
-            className='ml-2 px-4 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600'
+            className='ml-2 px-4 py-2 bg-yellow-500 text-white border  rounded-lg hover:bg-yellow-600'
           >
             Search
           </button>
@@ -158,35 +158,51 @@ function Navbar() {
           </div>
         </div>
         <div className='flex flex-col items-end space-y-4 py-4'>
-          <Link to='/' className='text-black hover:text-yellow-300' onClick={() => setIsOpen(false)}>
+          <Link
+            to='/'
+            className='text-black hover:text-yellow-300'
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </Link>
-          <Link to='/about' className='text-black hover:text-yellow-300' onClick={() => setIsOpen(false)}>
+          <Link
+            to='/about'
+            className='text-black hover:text-yellow-300'
+            onClick={() => setIsOpen(false)}
+          >
             About
           </Link>
-          <Link to='/projects' className='text-black hover:text-yellow-300' onClick={() => setIsOpen(false)}>
+          <Link
+            to='/projects'
+            className='text-black hover:text-yellow-300'
+            onClick={() => setIsOpen(false)}
+          >
             Projects
           </Link>
-          <Link to='/contact' className='text-black hover:text-yellow-300' onClick={() => setIsOpen(false)}>
+          <Link
+            to='/contact'
+            className='text-black hover:text-yellow-300'
+            onClick={() => setIsOpen(false)}
+          >
             Contact
           </Link>
         </div>
 
         {/* Search Bar on Mobile (Search button below input) */}
         <div className='flex flex-col items-end ml-4 mt-4'>
-          <div className='flex items-center bg-white rounded-full px-3 py-1 shadow-md'>
+          <div className='flex items-center bg-white  px-3 py-1 shadow-lg'>
             <i className='text-black text-lg'>&#128269;</i>
             <input
               type='text'
               placeholder='Search for art...'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className='ml-2 px-4 py-2 rounded-full bg-transparent text-gray-700 focus:outline-none w-0 transition-all ease-in-out duration-300 focus:w-56'
+             className='ml-2 px-4 py-2 rounded-lg border  bg-transparent border-yellow-700 text-gray-700 focus:outline-none w-0 transition-all ease-in-out duration-300 focus:w-56'
             />
           </div>
           <button
             onClick={handleSearch}
-            className='mt-2 px-4 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600'
+             className='ml-2 px-4 py-2 bg-yellow-500 text-white border  rounded-lg hover:bg-yellow-600 mt-4'
           >
             Search
           </button>

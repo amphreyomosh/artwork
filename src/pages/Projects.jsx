@@ -93,31 +93,32 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <div id='projects' className='min-h-screen bg-white p-16 mt-16'>
-      {/* Added 'mt-16' to create space below the navbar */}
-      <div className='max-w-6xl mx-auto text-startr'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+    <div id='projects' className='min-h-screen bg-white p-4 sm:p-16 mt-16'>
+      {/* Adjusted padding for small screens */}
+      <div className='max-w-6xl mx-auto text-start'>
+        <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3'>
           {projectList.map((project) => (
             <div
               key={project.id}
-              className='bg-white p-11  shadow-lg hover:shadow-xl transition-shadow duration-300'
+              className='bg-white shadow-lg hover:shadow-xl transition-shadow duration-300'
               style={{
                 backgroundImage: project.bgImage,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                width: '100%',
-                height: '100%',
+                width: '100%', // Ensures full width
+                height: '100%', // Maintains height proportion
               }}
             >
-              <h2 className='text-2xl font-semibold text-gray-800 mb-3'>{project.title}</h2>
-              <p className='text-gray-600 mb-4'>{project.description}</p>
-              <div className='flex justify-start'>
-                {/* Wrapping the button inside a flex container */}
-                <Link to={`/projects/${project.id}`}>
-                  <button className='bg-yellow-500 text-white py-2 px-4  hover:bg-yellow-600'>
-                    View Project
-                  </button>
-                </Link>
+              <div className='p-4 sm:p-16'>
+                <h2 className='text-2xl font-semibold text-gray-800 mb-3'>{project.title}</h2>
+                <p className='text-gray-600 mb-4'>{project.description}</p>
+                <div className='flex justify-start'>
+                  <Link to={`/projects/${project.id}`}>
+                    <button className='bg-yellow-500 text-white py-2 px-4 hover:bg-yellow-600'>
+                      View Project
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
