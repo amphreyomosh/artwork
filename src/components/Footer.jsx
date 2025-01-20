@@ -10,8 +10,8 @@ function Footer() {
           {/* Logo & About */}
           <div className='w-full md:w-1/3 text-center md:text-left mb-6 md:mb-0'>
             <p className='text-gray-400 text-md'>
-              Discover beautiful artworks from talented artists across the globe. Be inspired by
-              creativity and passion.
+              Discover beautiful art from <strong>Jope Graphics</strong> based in Kenya and be
+              inspired by creativity and passion.
             </p>
           </div>
 
