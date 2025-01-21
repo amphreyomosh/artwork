@@ -6,7 +6,7 @@ const projectDetails = {
     title: 'Masterful Paintings',
     description:
       'Dive deep into the world of vibrant and evocative paintings, where each brushstroke tells a story and captures the essence of timeless artistry.',
-    image: 'url_to_image', // Replace with actual image URL
+    image: 'https://images.unsplash.com/photo-1509518408633-d42f618a2bdc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGhvdG98ZW58MHx8MHx8fDA%3D', // Replace with actual image URL
     price: {
       sold: 500, // Price for sold items
       remaining: 600, // Price for remaining items
@@ -153,8 +153,8 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className='min-h-screen bg-gray-100 p-16 mt-16'>
-      <div className='max-w-4xl mx-auto'>
+    <div className='min-h-screen bg-gray-100 p-4 sm:p-16 mt-16'>
+      <div className='sm:max-w-4xl w-full mx-auto mt-16'>
         {/* Breadcrumb Navigation */}
         <nav className='mb-4'>
           <Link to='/projects' className='text-yellow-500 hover:underline'>
@@ -162,12 +162,16 @@ const ProjectDetails = () => {
           </Link>{' '}
           / <span>{project.title}</span>
         </nav>
-        <div className='bg-white p-6 rounded-lg shadow-lg'>
+        <div className='bg-white p-6 w-full shadow-lg'>
           <h1 className='text-3xl font-bold text-gray-800 mb-4'>{project.title}</h1>
-          <img src={project.image} alt={project.title} className='w-full h-auto mb-4 rounded-lg' />
+          <img src={project.image} alt={project.title} className='w-full h-auto mb-4' />
           <p className='text-gray-600 mb-4'>{project.description}</p>
-          <p><strong>Price for sold pieces:</strong> ${project.price.sold}</p>
-          <p><strong>Price for remaining pieces:</strong> ${project.price.remaining}</p>
+          <p>
+            <strong>Price for sold pieces:</strong> ${project.price.sold}
+          </p>
+          <p>
+            <strong>Price for remaining pieces:</strong> ${project.price.remaining}
+          </p>
         </div>
       </div>
     </div>

@@ -152,8 +152,8 @@ function Navbar() {
             />
           </div>
           <div className='md:hidden text-black'>
-            <button onClick={() => setIsOpen(!isOpen)} className='text-4xl'>
-              &#9776;
+            <button onClick={() => setIsOpen(!isOpen)} className='text-2xl'>
+            &#10005;
             </button>
           </div>
         </div>
