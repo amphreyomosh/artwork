@@ -12,7 +12,13 @@
   opacity: 0;
   position: relative;
   transform: translateY(0);
-  
+}
+@media (max-width: 768px) {
+  .letter {
+    font-size: 80px;
+   
+  }
+    
 }
 
 /* Water droplet effect for the J letter */
