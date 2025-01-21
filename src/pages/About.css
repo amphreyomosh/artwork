@@ -1,0 +1,63 @@
+
+#animation-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.letter {
+  font-size: 200px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  position: relative;
+  transform: translateY(0);
+  
+}
+
+/* Water droplet effect for the J letter */
+#letter-J {
+  animation: drop-animation 1.5s ease-out forwards;
+}
+
+@keyframes drop-animation {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Wave effect for other letters (O, P, E) */
+@keyframes wave-animation {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wave {
+    animation: wave-animation 0.5s ease-out forwards;
+    opacity: 1; /* Ensure the wave is visible */
+    animation-delay: .8s; /* Add a delay before starting the wave animation */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  }
+  
