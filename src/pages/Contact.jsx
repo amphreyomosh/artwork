@@ -45,6 +45,7 @@ const Contact = () => {
                   type="text"
                   id="firstName"
                   name="firstName"
+                  required
                   value={formData.firstName}
                   onChange={handleChange}
                   className="mt-2 block w-full bg-white px-3 py-2 text-base text-gray-900 border border-gray-300 focus:border-indigo-600 focus:ring-indigo-600 rounded-md"
@@ -85,6 +86,7 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
+                required
                 value={formData.email}
                 onChange={handleChange}
                 className="mt-2 block w-full bg-white px-3 py-2 text-base text-gray-900 border border-gray-300 focus:border-indigo-600 focus:ring-indigo-600 rounded-md"
@@ -98,6 +100,7 @@ const Contact = () => {
                 <select
                   id="country"
                   name="country"
+                  required
                   value={formData.country}
                   onChange={handleChange}
                   className="block w-1/3 bg-white px-3 py-2 text-base border border-gray-300 focus:border-indigo-600 focus:ring-indigo-600 rounded-l-md"

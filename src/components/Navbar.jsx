@@ -31,7 +31,30 @@ function Navbar() {
         remaining: 400,
       },
     },
+
     // Add other artworks as needed
+    {
+        title: 'Pencil drawings',
+        description:
+          'Explore a collection of meticulously crafted sculptures that bring life to stone and metal.',
+        image:
+          'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hc3RlcmZ1bCUyMHBhaW50aW5nfGVufDB8fDB8fHww',
+        price: {
+          sold: 300,
+          remaining: 400,
+        },
+      },
+      {
+        title: 'picture',
+        description:
+          'Explore a collection of meticulously crafted sculptures that bring life to stone and metal.',
+        image:
+          'https://images.unsplash.com/photo-1655384286215-f0c925fcd745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBob3RvfGVufDB8fDB8fHww',
+        price: {
+          sold: 300,
+          remaining: 400,
+        },
+      },
   ];
 
   useEffect(() => {
@@ -207,6 +230,19 @@ function Navbar() {
             Search
           </button>
         </div>
+        <div className="w-full md:w-1/2 text-end md:text-left mt-32 md:mb-0">
+            <div className="flex space-x-6 justify-center md:justify-start">
+              <a href="#" className="text-gray-400 hover:text-black transition duration-300">
+                <i className="fab fa-facebook-f fa-2x"></i>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-black transition duration-300">
+                <i className="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-black transition duration-300">
+                <i className="fab fa-instagram fa-2x"></i>
+              </a>
+            </div>
+          </div>
       </div>
     </nav>
   );
