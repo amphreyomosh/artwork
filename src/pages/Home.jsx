@@ -117,7 +117,7 @@ function Home() {
           {/* Right Image */}
           <div className='w-full lg:w-7/20'>
             <img
-              src='/public/jaguar-art.jpg'
+              src='/jaguar-art.jpg'
               alt='jaguar art'
               className=' w-full object-cover'
             />
