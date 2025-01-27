@@ -119,7 +119,7 @@ function Home() {
             <img
               src='/jaguar-art.jpg'
               alt='jaguar art'
-              className=' w-full object-cover'
+              className=' w-full object-cover brightness-110'
             />
           </div>
         </div>
