@@ -100,7 +100,7 @@ function Home() {
               id='imageOne'
               src='/sculpture.jpg'
               alt='Artwork on the left side'
-              className='shadow-md w-full object-cover'
+              className='shadow-md w-full object-cover brightness-140'
             />
           </div>
 
