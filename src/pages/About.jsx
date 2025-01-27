@@ -29,9 +29,9 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <div className="w-full md:w-1/2">
             <img
-              src="https://images.unsplash.com/photo-1517825738774-7de9363ef735?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjB0aWdlcnxlbnwwfHwwfHx8MA%3D%3D"
+              src="/jope-image.jpg"
               alt="Artist"
-              className="shadow-lg w-full h-400"
+              className="shadow-lg w-full h-400 brightness-10"
             />
           </div>
           <div className="w-full md:w-1/2 mt-8 md:mt-0">
