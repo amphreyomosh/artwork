@@ -56,7 +56,7 @@ const About = () => {
       </div>
 
       {/* Inspirational Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-yellow-200 py-16">
         <div className="container mx-auto text-end px-6">
           <h2 className="text-3xl font-bold mb-6">The Vision Behind the Art</h2>
           <p className="text-lg max-w-4xl ml-auto mb-8 text-end px-6">

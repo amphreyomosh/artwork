@@ -93,7 +93,7 @@ function Navbar() {
     <nav className='fixed top-0 left-0 w-full bg-white text-white p-5 z-50'>
       <div className='flex justify-between items-center w-full'>
         {/* Logo on the far left */}
-        <div className='text-2xl font-bold'>
+        <div className='text-2xl font-bold'> 
           <img
             src='/jopelogo.png'
             alt='jopegraphics logo'
@@ -104,6 +104,7 @@ function Navbar() {
               imageRendering: 'auto',
               filter: 'brightness(1)',
               zIndex: '10000',
+              Link: '/',
             }}
           />
         </div>
