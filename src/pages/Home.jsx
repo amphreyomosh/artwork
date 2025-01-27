@@ -117,9 +117,9 @@ function Home() {
           {/* Right Image */}
           <div className='w-full lg:w-7/20'>
             <img
-              src='https://images.unsplash.com/photo-1728675437270-0878c337e5a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFydHdvcmtzfGVufDB8fDB8fHww'
-              alt='Artwork on the right side'
-              className='shadow-md w-full object-cover'
+              src='/public/jaguar-art.jpg'
+              alt='jaguar art'
+              className=' w-full object-cover'
             />
           </div>
         </div>
