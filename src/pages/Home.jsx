@@ -98,7 +98,7 @@ function Home() {
           <div className='w-full lg:w-1/2'>
             <img
               id='imageOne'
-              src='https://images.unsplash.com/photo-1613833684940-e15a515aa1fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFydHdvcmtzfGVufDB8fDB8fHww'
+              src='/sculpture.jpg'
               alt='Artwork on the left side'
               className='shadow-md w-full object-cover'
             />
