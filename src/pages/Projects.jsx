@@ -5,7 +5,7 @@ import './Projects.css';
 const projectList = [
   {
     id: 1,
-    title: 'Masterful Paintings',
+    title: 'Jaguar Paint',
     description: 'Explore vibrant, timeless paintings that tell stories and evoke emotions.',
     bgImage: '/jaguar-art.jpg',
   },
