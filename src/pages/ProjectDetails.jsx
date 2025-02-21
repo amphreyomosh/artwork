@@ -1,146 +1,91 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import './ProjectDetails.css';
 
 const projectDetails = {
   1: {
-    title: 'Masterful Paintings',
+    title: 'Jaguar Paint',
     description:
-      'Dive deep into the world of vibrant and evocative paintings, where each brushstroke tells a story and captures the essence of timeless artistry.',
-    image: 'https://images.unsplash.com/photo-1509518408633-d42f618a2bdc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGhvdG98ZW58MHx8MHx8fDA%3D', // Replace with actual image URL
-    price: {
-      sold: 500, // Price for sold items
-      remaining: 600, // Price for remaining items
-    },
+      'Painted a jaguar on a canva with black piece of art. This piece captures the raw beauty and power of the jaguar, with intricate details and vibrant colors that bring the animal to life.',
+    image: '/jaguar-art.jpg', // Replace with actual image URL
   },
   2: {
     title: 'Exquisite Pencil Drawings',
     description:
-      'Intricate pencil sketches that capture stunning details and lifelike textures, bringing art to life with every stroke.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 300,
-      remaining: 350,
-    },
+      'Intricate pencil sketches that capture stunning details and lifelike textures, bringing art to life with every stroke. Each drawing is a testament to the artist’s skill and dedication to realism.',
+    image: 'https://source.unsplash.com/random/800x600/?pencil,drawing',
   },
   3: {
     title: 'Magnificent Sculptures',
     description:
-      'Handcrafted sculptures blending creativity and precision, designed to leave a lasting impression with every curve and contour.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 800,
-      remaining: 1000,
-    },
+      'Handcrafted sculptures blending creativity and precision, designed to leave a lasting impression with every curve and contour. These sculptures are perfect for adding a touch of elegance to any space.',
+    image: '/sculpture.jpg',
   },
   4: {
     title: 'Expressive Canvas Art',
     description:
-      'Dynamic and abstract canvas art pieces to inspire and captivate the imagination, creating a world of emotion through color and form.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 450,
-      remaining: 550,
-    },
+      'Dynamic and abstract canvas art pieces to inspire and captivate the imagination, creating a world of emotion through color and form. Each piece is a unique expression of the artist’s vision.',
+    image: 'https://source.unsplash.com/random/800x600/?canvas,art',
   },
   5: {
     title: 'Contemporary Digital Art',
     description:
-      'Cutting-edge digital creations that redefine artistic boundaries, blending technology with creativity to create unique, modern masterpieces.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 700,
-      remaining: 800,
-    },
+      'Cutting-edge digital creations that redefine artistic boundaries, blending technology with creativity to create unique, modern masterpieces. These pieces are perfect for the tech-savvy art lover.',
+    image: 'https://source.unsplash.com/random/800x600/?digital,art',
   },
   6: {
     title: 'Photography Masterpieces',
     description:
-      'Breathtaking photographs that capture life’s most beautiful moments, freezing time and emotion in a single frame.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 600,
-      remaining: 750,
-    },
+      'Breathtaking photographs that capture life’s most beautiful moments, freezing time and emotion in a single frame. Each photograph tells a story and evokes a sense of wonder.',
+    image: 'https://source.unsplash.com/random/800x600/?photography,art',
   },
   7: {
     title: 'Mixed Media Creations',
     description:
-      'Innovative art pieces combining different media to craft unique expressions, breaking traditional boundaries and experimenting with materials.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 350,
-      remaining: 400,
-    },
+      'Innovative art pieces combining different media to craft unique expressions, breaking traditional boundaries and experimenting with materials. These creations are a testament to the artist’s versatility and creativity.',
+    image: 'https://source.unsplash.com/random/800x600/?mixed,media,art',
   },
   8: {
     title: 'Iconic Mural Designs',
     description:
-      'Large-scale murals that transform spaces into vibrant works of art, turning walls into canvases for storytelling and visual impact.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 1000,
-      remaining: 1200,
-    },
+      'Large-scale murals that transform spaces into vibrant works of art, turning walls into canvases for storytelling and visual impact. These murals are perfect for making a bold statement.',
+    image: 'https://source.unsplash.com/random/800x600/?mural,art',
   },
   9: {
     title: 'Artistic Installations',
     description:
-      'Immersive installations that create unforgettable visual and spatial experiences, combining art, architecture, and design to challenge perception.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 1200,
-      remaining: 1500,
-    },
+      'Immersive installations that create unforgettable visual and spatial experiences, combining art, architecture, and design to challenge perception. These installations are perfect for public spaces and galleries.',
+    image: 'https://source.unsplash.com/random/800x600/?installation,art',
   },
   10: {
     title: 'Ceramic Artistry',
     description:
-      'Delicate and detailed ceramic pieces showcasing precision, craftsmanship, and the timeless beauty of hand-formed clay.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 400,
-      remaining: 500,
-    },
+      'Delicate and detailed ceramic pieces showcasing precision, craftsmanship, and the timeless beauty of hand-formed clay. Each piece is a unique work of art that adds elegance to any setting.',
+    image: 'https://source.unsplash.com/random/800x600/?ceramic,art',
   },
   11: {
     title: 'Calligraphy Wonders',
     description:
-      'Beautifully handcrafted calligraphy that celebrates the art of lettering, blending tradition with modern aesthetics to create timeless works.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 250,
-      remaining: 300,
-    },
+      'Beautifully handcrafted calligraphy that celebrates the art of lettering, blending tradition with modern aesthetics to create timeless works. These pieces are perfect for adding a touch of sophistication to any space.',
+    image: 'https://source.unsplash.com/random/800x600/?calligraphy,art',
   },
   12: {
     title: 'Glass Art Creations',
     description:
-      'Dazzling glass art pieces blending color, light, and creativity, turning fragile material into stunning visual art that captivates and inspires.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 900,
-      remaining: 1100,
-    },
+      'Dazzling glass art pieces blending color, light, and creativity, turning fragile material into stunning visual art that captivates and inspires. These pieces are perfect for adding a touch of elegance to any space.',
+    image: 'https://source.unsplash.com/random/800x600/?glass,art',
   },
   13: {
     title: 'Wooden Masterpieces',
     description:
-      'Carved wooden art combining traditional craftsmanship with contemporary design, resulting in timeless and durable pieces of functional art.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 650,
-      remaining: 800,
-    },
+      'Carved wooden art combining traditional craftsmanship with contemporary design, resulting in timeless and durable pieces of functional art. These pieces are perfect for adding a touch of rustic charm to any space.',
+    image: 'https://source.unsplash.com/random/800x600/?wood,art',
   },
   14: {
     title: 'Metalwork Marvels',
     description:
-      'Intricate metal art that highlights elegance, durability, and design, using the strength of metal to create artistic expressions that stand the test of time.',
-    image: 'url_to_image', // Replace with actual image URL
-    price: {
-      sold: 750,
-      remaining: 950,
-    },
+      'Intricate metal art that highlights elegance, durability, and design, using the strength of metal to create artistic expressions that stand the test of time. These pieces are perfect for adding a touch of industrial chic to any space.',
+    image: 'https://source.unsplash.com/random/800x600/?metal,art',
   },
 };
 
@@ -164,14 +109,8 @@ const ProjectDetails = () => {
         </nav>
         <div className='bg-white p-6 w-full shadow-lg'>
           <h1 className='text-3xl font-bold text-gray-800 mb-4'>{project.title}</h1>
-          <img src={project.image} alt={project.title} className='w-full h-auto mb-4' />
+          <img src={project.image} alt={project.title}/>
           <p className='text-gray-600 mb-4'>{project.description}</p>
-          <p>
-            <strong>Price for sold pieces:</strong> ${project.price.sold}
-          </p>
-          <p>
-            <strong>Price for remaining pieces:</strong> ${project.price.remaining}
-          </p>
         </div>
       </div>
     </div>
