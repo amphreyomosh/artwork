@@ -10,20 +10,15 @@ function Home() {
 
   // Carousel settings
   const carouselSettings = {
-    infinite: true,
-    speed: 700,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 7000, // 7 seconds for each slide
     infinite: true, // Ensures the carousel loops indefinitely
     speed: 20000, // Slowest speed for the animation (20 seconds for a full slide transition)
+    slidesToShow: 3,
+    slidesToScroll: 1,
     autoplay: true, // Enables autoplay
-    autoplaySpeed: 0, // Disables delay between slides
+    autoplaySpeed: 7000, // 7 seconds for each slide
     cssEase: 'linear', // Creates a smooth, continuous motion
-
     arrows: false, // Hides navigation arrows
-    draggable: false, // Disables manual dragging
+    draggable: true, // Disables manual dragging
     responsive: [
       {
         breakpoint: 1024,
