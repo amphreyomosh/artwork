@@ -28,7 +28,7 @@ const About = () => {
       <div className="container mx-auto py-16 px-6">
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <div className="w-full md:w-1/2">
-            <img
+            <img id='jopeimage1'
               src="/jope-image.jpg"
               alt="Artist"
               className="shadow-lg w-full h-400 brightness-10"

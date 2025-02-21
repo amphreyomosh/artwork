@@ -67,3 +67,11 @@
     transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
   }
   
+@media screen and (max-width: 768px) {
+  #jopeimage1{
+    width: 400px;
+    height: 350px;
+    image-rendering: auto
+  }
+  
+}
